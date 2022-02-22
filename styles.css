@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: SansSerifBldFLF;
+}
+
+.grid-main {
+  display: grid;
+  grid-template-areas:
+    "logo menu menu"
+    "content content content"
+    "footer footer footer";
+  grid-template-columns: 75px repeat(2, auto);
+  grid-template-rows: 65px auto 190px;
+  height: 100vh;
+}
+
+.logo-container {
+  grid-area: logo;
+  background: #121f45;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.logo img {
+  height: 65px;
+  width: 100%;
+}
+
+.menu {
+  grid-area: menu;
+  background: #121f45;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: #cc1e4a;
+  padding: 5px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 25px;
+}
+
+li a:hover {
+  color: #ffc906;
+}
+
+.content {
+  grid-area: content;
+  grid-column: 1/4;
+  background-color: #121f45;
+}
+
+.content-item,
+.content-biografia {
+  display: flex;
+  width: 100%;
+}
+.h1content,
+.h2-trayectoria {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #cc1e4a;
+}
+
+.content-item img {
+  height: 30%;
+  width: 30%;
+}
+
+.content-item p,
+.biografia-p,
+.trayectoria-p {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #cc1e4a;
+  font-size: 20px;
+}
+
+.footer {
+  grid-area: footer;
+  background: #121f45;
+  grid-column: 1/4;
+  margin-bottom: 0%;
+}
+
+.nav-footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-footer li {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #cc1e4a;
+  padding-left: 20px;
+}
+
+.nav-footer li a {
+  padding: 2px;
+}
+
+.nav-footer li a:hover {
+  color: #ffc906;
+}
+
+.banner-biografia,
+.banner-trayectoria {
+  display: flex;
+  width: 100%;
+}
+
+.banner-biografia img,
+.banner-trayectoria img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.biografia-p,
+.trayectoria-p {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  line-height: 30px;
+}
+
+.h2-trayectoria {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.trayectoria-img {
+  display: flex;
+}
+
+.trayectoria-img img {
+  width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .content-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-item img {
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+  }
+
+  li a {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-item img {
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  li a {
+    font-size: 25px;
+  }
+}
